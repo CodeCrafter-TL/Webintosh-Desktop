@@ -44,3 +44,5 @@
 任何程序问题，请在 Issue 内反馈，将会有贡献者或其他用户与您讨论。
 
 如果您要贡献代码，我们将万分感谢。请 Fork 本仓库到自己的账户，修改代码，然后提交 Pull request 以便我们查阅。
+# Webintosh-Desktop
+The desktop part of Webintosh.
