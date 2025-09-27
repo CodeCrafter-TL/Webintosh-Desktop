@@ -1,0 +1,26 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+body.cursor-default, body {
+  cursor: url(../../cursors/default.svg), default !important;
+}
+body.cursor-beachball {
+  cursor: url(../../cursors/beachball.svg), default !important;
+}
+body.cursor-copy {
+  cursor: url(../../cursors/copy.svg), default !important;
+}
+body.cursor-pointer {
+  cursor: url(../../cursors/pointer.svg), default !important;
+}
+body.cursor-none {
+  cursor: none !important;
+}/*# sourceMappingURL=cursor.css.map */

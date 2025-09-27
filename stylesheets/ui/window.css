@@ -1,0 +1,296 @@
+p {
+  margin: 0;
+}
+
+.window {
+  box-shadow: 0 36px 100px 0 rgba(0, 0, 0, 0.4), 0 0 3px 0 rgba(0, 0, 0, 0.55), inset 0 0 3px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: auto;
+  height: 570px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% - 285px);
+  left: calc(50% - 358px);
+  overflow: hidden;
+}
+.window .left {
+  width: 214px;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), rgba(246, 246, 246, 0.84);
+  backdrop-filter: blur(30px) brightness(2);
+  -webkit-backdrop-filter: blur(50px) brightness(2);
+}
+.window .left .topbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.window .left .topbar .wintools {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-left: 19px;
+}
+.window .left .topbar .wintools .red {
+  width: 12px;
+  height: 12px;
+  border-radius: 1000px;
+  background: #ff5f57;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+  margin-right: 8px;
+}
+.window .left .topbar .wintools .yellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 1000px;
+  background: #febc2e;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+  margin-right: 8px;
+}
+.window .left .topbar .wintools .green {
+  width: 12px;
+  height: 12px;
+  border-radius: 1000px;
+  background: #28c840;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+}
+.window .left .topbar c-input {
+  width: 200px;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.window .left .list {
+  width: 100%;
+  height: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  overflow-y: scroll;
+  margin-right: 4px;
+}
+.window .left .list::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 100%;
+  margin-right: 4px;
+  padding-right: 4px;
+}
+.window .left .list::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  width: 8px !important;
+  background: #a8a9a9;
+}
+.window .left .list .margin {
+  width: 100%;
+  height: 10px;
+}
+.window .left .list .selection {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 10px;
+}
+.window .left .list .selection .icon {
+  width: 24px;
+  height: 24px;
+}
+.window .left .list .selection p {
+  color: black;
+  margin-left: 6.5px;
+  font-size: 13px;
+}
+.window .left .list .selection.id .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.window .left .list .selection.id p.title {
+  font-size: 13px;
+  font-family: "SFPro-Medium", "PingFangSC-Medium";
+}
+.window .left .list .selection.id p.detail {
+  font-size: 11px;
+  opacity: 0.55;
+}
+.window .left .list .selection.focus {
+  background: #0a82ff;
+}
+.window .left .list .selection.focus p {
+  color: rgba(255, 255, 255, 0.85);
+}
+.window .left .list .selection.focus p.detail {
+  color: white;
+}
+.window .edge {
+  width: 1px;
+  height: 100%;
+  box-shadow: -1px 0 0.5px rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 214px;
+  top: 0;
+}
+.window .right {
+  width: 501px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window .right .toolbar {
+  width: 100%;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+}
+.window .right .toolbar .controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  padding: 0 10px;
+  filter: invert(1);
+  margin-left: 14px;
+}
+.window .right .toolbar .controls img {
+  width: 10px;
+  margin-right: 14px;
+}
+.window .right .toolbar p {
+  margin: 0;
+  font-family: "SFPro-Semibold", "PingFangSC-Semibold";
+  color: black;
+  font-size: 15px;
+}
+.window .right .main {
+  width: 100%;
+  height: 100%;
+}
+.window .right .main .page {
+  display: none;
+}
+.window .right .main .page .row {
+  width: calc(100% - 60px);
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: solid 1px rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.02);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: -2;
+}
+.window .right .main .page .row p {
+  font-size: 13px;
+  align-self: flex-start;
+}
+.window .right .main .page .row .contents {
+  display: inline-flex;
+}
+.window .right .main .page .row .contents .pic {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+.window .right .main .page .row .contents .pic:last-child {
+  margin-right: 0;
+}
+.window .right .main .page .row .contents .pic img {
+  width: 86px;
+  border-radius: 6px;
+}
+.window .right .main .page .row .contents .pic p {
+  margin-top: 5px;
+  font-size: 11px;
+  margin-bottom: -2.5px;
+  opacity: 0.5;
+  align-self: center;
+}
+.window .right .main .page .row .contents .pic.focus img {
+  outline: solid #0a82ff 2.5px;
+}
+.window .right .main .page .row .contents .pic.focus p {
+  font-family: "SFPro-Semibold", "PingFang-Semibold";
+  opacity: 1;
+}
+.window .right .main .page .row .contents .oval {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  outline: solid 1px rgba(0, 0, 0, 0.04);
+  margin-left: 5px;
+}
+.window .right .main .page .row .contents .oval.all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+}
+.window .right .main .page .row .contents .oval.all .overlay {
+  width: 6px;
+  height: 6px;
+  border-radius: 4px;
+  background: white;
+  outline: solid 1px rgba(0, 0, 0, 0.04);
+}
+.window .right .main .page .row .contents .oval.blue {
+  background: #006fff;
+}
+.window .right .main .page .row .contents .oval.purple {
+  background: #8a358b;
+}
+.window .right .main .page .row .contents .oval.pink {
+  background: #F64694;
+}
+.window .right .main .page .row .contents .oval.red {
+  background: #DB3136;
+}
+.window .right .main .page .row .contents .oval.orange {
+  background: #f67719;
+}
+.window .right .main .page .row .contents .oval.yellow {
+  background: #FFC022;
+}
+.window .right .main .page .row .contents .oval.green {
+  background: #57B13D;
+}
+.window .right .main .page .row .contents .oval.gray {
+  background: #8D8D8D;
+}
+.window .right .main .page .row.first {
+  border-radius: 6px 6px 0 0;
+  border-bottom: solid 0.5px rgba(0, 0, 0, 0.04);
+}
+.window .right .main .page .row.middle {
+  border-radius: 0;
+  border-top: solid 0.5px rgba(0, 0, 0, 0.04);
+  border-bottom: solid 0.5px rgba(0, 0, 0, 0.04);
+}
+.window .right .main .page .row.last {
+  border-radius: 0 0 6px 6px;
+  border-top: solid 0.5px rgba(0, 0, 0, 0.04);
+}
+.window .right .main .page .margin {
+  width: 100%;
+  height: 10px;
+}
+.window .right .main .page.focus {
+  display: initial;
+}/*# sourceMappingURL=window.css.map */

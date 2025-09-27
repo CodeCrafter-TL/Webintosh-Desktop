@@ -1,0 +1,110 @@
+.about_this_mac {
+  width: 280px;
+  height: 515px;
+  background: rgba(255, 255, 255, 0.3333333333);
+  -webkit-backdrop-filter: blur(40px) saturate(1.2);
+          backdrop-filter: blur(40px) saturate(1.2);
+  position: absolute;
+  top: calc(50% - 257.5px);
+  left: calc(50% - 140px);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 36px 100px 0 rgba(0, 0, 0, 0.4), 0 0 3px 0 rgba(0, 0, 0, 0.55), inset 0 0 3px 0 rgba(255, 255, 255, 0.1);
+}
+.about_this_mac img {
+  width: 70%;
+  height: auto;
+}
+.about_this_mac p {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+}
+.about_this_mac p.model {
+  font-family: "SFPro-Semibold", "PingFangSC-Semibold";
+  font-size: 24px;
+}
+.about_this_mac p.year {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 25px;
+}
+.about_this_mac .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.about_this_mac .content div.left,
+.about_this_mac .content div.right {
+  display: flex;
+  flex-direction: column;
+}
+.about_this_mac .content div.left p,
+.about_this_mac .content div.right p {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 2px;
+}
+.about_this_mac .content div.left p.serial,
+.about_this_mac .content div.right p.serial {
+  font-family: "SFMono-Regular";
+}
+.about_this_mac .content div.left {
+  text-align: right;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+.about_this_mac .content div.right {
+  text-align: left;
+  align-items: flex-start;
+}
+.about_this_mac .button {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2px 12px;
+  margin-bottom: 15px;
+}
+.about_this_mac p.copyright {
+  opacity: 0.8;
+}
+.about_this_mac p.copyright span {
+  text-decoration: underline;
+}
+
+.wintools {
+  display: inline-flex;
+  margin: 8px;
+  align-self: flex-start;
+}
+.wintools .red {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #ff5f57;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+  margin-right: 8px;
+}
+.wintools .yellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #febc2e;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+  margin-right: 8px;
+}
+.wintools .green {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #28c840;
+  border: solid 0.5px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=index.css.map */

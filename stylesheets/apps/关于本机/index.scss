@@ -1,0 +1,126 @@
+.about_this_mac {
+    width: 280px;
+    height: 515px;
+    background: #fff5;
+    backdrop-filter: blur(40px) saturate(1.2);
+    position: absolute;
+    top: calc(50% - 257.5px);
+    left: calc(50% - 140px);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 36px 100px 0 rgba(0, 0, 0, 0.40), 0 0 3px 0 rgba(0, 0, 0, 0.55), inset 0 0 3px 0 rgba(255, 255, 255, 0.10);
+    // justify-content: center;
+
+    img {
+        width: 70%;
+        height: auto;
+    }
+
+    p {
+        margin: 0;
+        font-size: 13px;
+        text-align: center;
+
+        &.model {
+            font-family: "SFPro-Semibold", "PingFangSC-Semibold";
+            font-size: 24px;
+        }
+
+        &.year {
+            font-size: 12px;
+            opacity: 0.5;
+            margin-bottom: 25px;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        div.left,
+        div.right {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+
+            p {
+                font-size: 13px;
+                line-height: 16px;
+                margin-top: 2px;
+
+                &.serial {
+                    font-family: "SFMono-Regular";
+                }
+            }
+        }
+
+        div.left {
+            text-align: right;
+            align-items: flex-end;
+            margin-right: 10px;
+        }
+
+        div.right {
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+
+    .button {
+        display: inline-flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        background: #0003;
+        // backdrop-filter: blur(10px);
+        border-radius: 5px;
+        padding: 2px 12px;
+        margin-bottom: 15px;
+    }
+
+    p.copyright {
+        span {
+            text-decoration: underline;
+        }
+
+        opacity: 0.8;
+    }
+}
+
+.wintools {
+    display: inline-flex;
+    margin: 8px;
+    align-self: flex-start;
+
+    .red {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background: #ff5f57;
+        border: solid 0.5px rgba(0, 0, 0, 0.2);
+        margin-right: 8px;
+    }
+
+    .yellow {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background: #febc2e;
+        border: solid 0.5px rgba(0, 0, 0, 0.2);
+        margin-right: 8px;
+    }
+
+    .green {
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background: #28c840;
+        border: solid 0.5px rgba(0, 0, 0, 0.2);
+    }
+}

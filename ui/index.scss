@@ -1,0 +1,166 @@
+$names : "SFPro-Regular",
+"PingFangSC-Regular",
+"SFPro-Bold",
+"PingFangSC-Bold";
+$urls : url(./sf-pro-display_regular.woff2),
+url(./PingFangSC-Regular.woff2),
+url(./sf-pro-display_semibold.woff2),
+url(./PingFangSC-Semibold.woff2);
+$iter: 1;
+
+@each $i in $names {
+    @font-face {
+        font-family: $i;
+        src: nth($urls, $iter);
+    }
+
+    $iter: $iter + 1;
+}
+
+div[menu] {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 0 1px 0 rgba(255, 255, 255, 0.50),
+        0 2px 4px 0 rgba(0, 0, 0, 0.15),
+        0 8px 15px 6px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    background: rgba(246, 246, 246, 0.60);
+    backdrop-filter: blur(30px);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+    cursor: default;
+
+    div[item] {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.85);
+        line-height: 16px;
+        font-family: "SFPro-Medium", "PingFang-Medium";
+        margin: 1.5px 0;
+        border-radius: 5px;
+        padding: 3px 10px;
+
+        &:hover {
+            background: #0A82FF;
+            color: white;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    hr {
+        background: rgba(0, 0, 0, 0.10);
+        border-radius: 0.5px;
+        border: none;
+        width: calc(100% - 14px);
+        height: 1px;
+        margin: 4px 0;
+        align-self: center;
+    }
+}
+
+div[radiobutton] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+
+    div[type] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+        position: relative;
+        margin-right: 6px;
+
+        img[oval] {
+            width: 8px;
+            height: 7px;
+            display: none;
+            z-index: 2;
+        }
+
+        div[gradient] {
+            display: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.17;
+        }
+
+        div[back] {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 7px;
+            background: #fff;
+            border: 0.5px solid rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.10), inset 0 0 2px 0 rgba(0, 0, 0, 0.10);
+            z-index: 0;
+        }
+    }
+
+    p {
+        margin: 0;
+        margin-top: 1px;
+        font-size: 13px;
+        font-family: "SFPro-Regular", "PingFang-Regular";
+    }
+
+    &[state=on] {
+        div[type] {
+            img[oval] {
+                display: block;
+            }
+
+            div[gradient] {
+                display: block;
+                background: linear-gradient(180deg, #fff 0%, #fff0 96%);
+            }
+
+            div[back] {
+                border: none;
+                box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.12), 0 0 1px 0 rgba(255, 255, 255, 0.24);
+                background: #007aff;
+            }
+        }
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+div[tooltip] {
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.20), 0 0 0 0 rgba(0,0,0,0.12);
+    background: rgba(246,246,246,0.72);
+    border-radius: 1px;
+    font-family: "SFPro-Medium";
+    font-size: 11px;
+    color: #4C4C4C;
+    text-align: left;
+    line-height: 13px;
+    padding: 3px 6px;
+    display: inline;
+    backdrop-filter: blur(30px);
+}

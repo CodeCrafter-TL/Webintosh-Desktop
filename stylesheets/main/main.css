@@ -1,0 +1,71 @@
+@font-face {
+    src: url(../../fonts/sf-pro-display_regular.woff2);
+    font-family: "SFPro-Regular";
+}
+
+@font-face {
+    src: url(../../fonts/PingFangSC-Regular.woff2);
+    font-family: "PingFangSC-Regular";
+}
+
+@font-face {
+    src: url(../../fonts/SFMono-Regular.otf);
+    font-family: "SFMono-Regular";
+}
+
+@font-face {
+    src: url(../../fonts/sf-pro-display_semibold.woff2);
+    font-family: "SFPro-Semibold";
+}
+
+@font-face {
+    src: url(../../fonts/PingFangSC-Semibold.woff2);
+    font-family: "PingFangSC-Semibold";
+}
+
+@font-face {
+    src: url(../../fonts/sf-pro-display_medium.woff2);
+    font-family: "SFPro-Medium";
+}
+
+@font-face {
+    src: url(../../fonts/PingFangSC-Medium.woff2);
+    font-family: "PingFangSC-Medium";
+}
+
+body, html {
+    overflow: hidden;
+    font-family: "SFPro-Regular", "PingFangSC-Regular";
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.009em;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    inset: 0;
+}
+
+.wallpaper {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url(../../images/Wallpaper.png);
+    /* background: white; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body > div.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 2046;
+    background: #0009;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
