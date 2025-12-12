@@ -24,6 +24,8 @@
   left: 0;
   overflow: hidden;
   z-index: 2048;
+  opacity: 0;
+  animation: fade 0.35s ease-in forwards;
 }
 .launchpad .containers {
   width: calc(100% - 180px);
@@ -68,6 +70,4 @@
   background-size: cover;
   filter: blur(20px);
   transform: scale(1.2);
-  opacity: 0;
-  animation: fade 0.35s ease forwards;
 }/*# sourceMappingURL=index.css.map */

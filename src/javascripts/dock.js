@@ -41,7 +41,7 @@ function init() {
                     setTimeout(() => {
                         img.classList.remove("opening");
                         light.classList.add("on");
-                        create("./assets/apps/"+app+".html", light);
+                        create("./assets/apps/"+app+".html", img.alt, light);
                         if (!noMenuChanging.includes(img.alt))
                             updateMenu(app);
                     }, 2980);

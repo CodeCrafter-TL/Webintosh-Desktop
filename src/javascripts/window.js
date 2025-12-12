@@ -1,9 +1,10 @@
 import { createAlert } from "./ui/alert.js";
+import { updateMenu } from "./finderbar.js";
 
 let fd = document.querySelector(".finderbar")
 let zIndex = 5;
 
-export function create(file, light = null) {
+export function create(file, name, light = null) {
     fetch(file)
         .then(response => {
             if (response.status !== 200) {
@@ -28,11 +29,11 @@ export function create(file, light = null) {
             console.error('Error opening app:', error);
         });
     setTimeout(() => {
-        resetWindowListeners(light);
+        resetWindowListeners(name, light);
     }, 150);
 }
 
-export function resetWindowListeners(light = null) {
+export function resetWindowListeners(name, light = null) {
     let windows = document.querySelectorAll(".window");
     windows.forEach(win => {
         let closeBtn = win.querySelector(".wintools .red");
@@ -60,13 +61,13 @@ export function resetWindowListeners(light = null) {
 
         win.addEventListener('mousedown', function(e) {
             if (!e.target.closest('.wintools')) {
-                bringToFront(win);
+                bringToFront(win, name);
             }
         });
     });
 }
 
-function addWindowDrag(windowElement) {
+function addWindowDrag(windowElement, name) {
     let isDragging = false;
     let offsetX, offsetY;
 
@@ -102,6 +103,8 @@ function addWindowDrag(windowElement) {
     document.addEventListener('mouseup', function () {
         isDragging = false;
     });
+
+    updateMenu(name);
 }
 
 function bringToFront(windowElement) {
